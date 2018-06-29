@@ -14,6 +14,10 @@
             <input pattern="$Text">
                 <var name="UserName" value="cap($Text)" scope="user"/>
                 <output value="Отлично, $UserName! Теперь поищем, что бы поесть?."/>
+				<sample>
+        <item value="Да"/>
+        <item value="Давай поищем"/>
+    </sample>
                 <context/>
             </input>
         </context>
@@ -21,14 +25,11 @@
 
     <input pattern="* (Да*|Давай*|Конечно*) *">
 		<output value="Отлично, в каком ты городе?."/>
-	<sample>
-        <item value="Да"/>
-        <item value="Давай поищем"/>
-    </sample>
+	
     </input>
 <input pattern="$Text">
                 <var name="Gorod" value="cap($Text)" scope="gorod"/>
-                <output value="Отлично, город - $Gorod! Пицца, суши или Бургеры?."/>
+                <output value="Отлично, город - $Gorod! Пицца, суши или Бургеры?"/>
                 
             </input>
     <input pattern="[* (кто|что) так*] $Text">
