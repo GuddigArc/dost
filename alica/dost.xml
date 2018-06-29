@@ -22,11 +22,11 @@
         <item value="$link"/>
         <item value="Давай поищем"/>
     </sample>
-               <buttons>
+               <sample>
       <url>https://elpatio.pro/pizza</url>
       <hide>true</hide>
       <title>Пицца в Новокузнецке</title>
-    </buttons>
+    </sample>
             </input>
         </context>
     </input>
