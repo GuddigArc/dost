@@ -3,10 +3,7 @@
      <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя!"/>
-            
-        </output>
-
-        <context if="empty($UserLog)" id="log">
+            <context if="empty($UserLog)" id="log">
             <output value="Привет! Меня зовут Алиса! Сообщи свой логин от мессенджера"/>
 
             <input pattern="$Text">
@@ -20,6 +17,9 @@
                 <context/>
             </input>
         </context>
+        </output>
+
+        
           
     </input>
 
