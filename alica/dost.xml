@@ -39,7 +39,7 @@
 </sample>
     </input>
 
-	<input pattern="Пицца">
+	<input pattern="$Pizza">
                	
                 <output value="Отлично, в Новокунецке есть несколько отличных пиццерий. Но давайте узнаем ваш район?"/>
      <sample>
@@ -51,7 +51,7 @@
 </sample>
             </input>
 
-	<input pattern="Суши">
+	<input pattern="$Sushi">
                	
                 <output value="Отлично, в Новокунецке есть несколько отличных японских ресторанов и суши баров. Но давайте узнаем ваш район?"/>
      <sample>
