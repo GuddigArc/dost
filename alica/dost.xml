@@ -25,9 +25,11 @@
 
     <input pattern="* (Да*|Давай*|Конечно*) *">
 		<output value="Отлично, Пицца, суши или Бургеры?."/>
+		<sample>
 	<item value="Пицца"/>
   <item value="Суши"/>
 <item value="Бургеры"/> 
+</sample>
     </input>
 <context>
 	<input pattern="Пицца">
@@ -37,7 +39,9 @@
             </input>
 			
 <context/>
-<input pattern="[* (кто|что) так*] $Text">
+
+
+	<input pattern="[* (кто|что) так*] $Text">
         <context id="name" if="empty($UserName)"/>
 
         <context id="wiki" if="full($UserName)">
