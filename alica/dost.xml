@@ -42,23 +42,23 @@
     </input>
 
 	<input pattern="Пицца">
-    <context id="pizza"/>           	
+    <context id="pizza">
+	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
+	</context>          	
     </input>
 	<input pattern="Суши">
-    <context id="sushi"/>           	
+   <context id="sushi"/>
+	</context>	       	
     </input>	
 	<input pattern="Бургер">
-	<context id="burger"/>           	
+	<context id="burger"/>  
+	</context>       	
     </input>
 	
 	<!-- Содержание по еде -->
-	<context id="pizza">
-	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
-	</context>
-	<context id="sushi"/>
-	</context>	
-	<context id="burger"/>  
-	</context>
+	
+	
+	
 
 
 	<!--<input pattern="[* (кто|что) так*] $Text">
