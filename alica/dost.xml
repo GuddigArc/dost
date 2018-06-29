@@ -28,6 +28,9 @@
     </input>
 
     <input pattern="* (Да*|Давай*|Конечно*|Очень голоден*) *">
+	 <var name="Pizza" value="Пицца" scope="pizza"/>
+	  <var name="Sushi" value="Суши" scope="sushi"/>
+	   <var name="Burger" value="Бургер" scope="burger"/>
 		<output value="Отлично, Пицца, суши или Бургеры?."/>
 		<sample>
 	<item value="Пицца"/>
