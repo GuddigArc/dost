@@ -46,14 +46,18 @@
 	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
 	      	
     </input>
-	
-   <context id="sushi"/>
-	   	
-    </input>	
-	
-	<context id="burger"/>  
-		
+	<input pattern="Суши">
+   
+	 <output value="Ага, значит Суши? Ок. Вот что мы рекомендуем:"/>
+	      	
     </input>
+	<input pattern="Бургер">
+   
+	 <output value="Ага, значит Бургер? Ок. Вот что мы рекомендуем:"/>
+	      	
+    </input>
+  
+
 	
 	<!-- Содержание по еде -->
 	
