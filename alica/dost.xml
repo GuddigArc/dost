@@ -19,10 +19,14 @@
                 <var name="UserName" value="cap($Text)" scope="user"/>
                 <output value="Отлично, $UserName! Теперь поищем, что бы поесть?"/>
 				<sample>
-		<item xlink:type="simple" xlink:href="http://msiter.ru" value="Да"/>
+        <item value="$link"/>
         <item value="Давай поищем"/>
     </sample>
-               
+               <buttons>
+      <url>https://elpatio.pro/pizza</url>
+      <hide>true</hide>
+      <title>Пицца в Новокузнецке</title>
+    </buttons>
             </input>
         </context>
     </input>
