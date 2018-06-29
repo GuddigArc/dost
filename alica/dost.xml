@@ -40,9 +40,9 @@
 <item value="Бургеры"/> 
 </sample>
     </input>
-<context>
+
 	<input pattern="Пицца">
-               	
+  <context>             	
                 <output value="Отлично, в Новокунецке есть несколько отличных пиццерий. Но давайте узнаем ваш район?"/>
      <sample>
 	<item value="Центральный"/>
@@ -62,8 +62,9 @@
 <item value="4"/>
 <item value="5"/> 
 </sample>
-            </input>		
 </context>
+            </input>		
+
 	<input pattern="Суши">
                	
                 <output value="Отлично, в Новокунецке есть несколько отличных японских ресторанов и суши баров. Но давайте узнаем ваш район?"/>
