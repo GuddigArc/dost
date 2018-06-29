@@ -42,17 +42,17 @@
     </input>
 
 	<input pattern="Пицца">
-    <context id="pizza">
+   
 	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
-	</context>          	
+	      	
     </input>
-	<input pattern="Суши">
+	
    <context id="sushi"/>
-	</context>	       	
+	   	
     </input>	
-	<input pattern="Бургер">
+	
 	<context id="burger"/>  
-	</context>       	
+		
     </input>
 	
 	<!-- Содержание по еде -->
