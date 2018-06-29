@@ -6,26 +6,25 @@
     </sample>
 
     <input pattern="* (привет*|здравствуй*) *">
-        <output if="full($UserName)">
-            <item value="Привет, $UserName! Рада снова видеть тебя!"/>
-            <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
+        <output if="full($UserLog)">
+            <item value="Привет, $UserLog! Рада снова видеть тебя!"/>
+       
         </output>
 
-        <context if="empty($UserName)" id="name">
-            <output value="Привет! Меня зовут Алиса! А это - демонстрация моего навыка, созданного с помощью платформы zenbot. Как тебя зовут?"/>
+        <context if="empty($UserLog)" id="log">
+            <output value="Привет! Меня зовут Алиса! И мы будем соединятся с мессенджером. Сообщи свой логин"/>
 
             <input pattern="$Text">
-                <var name="UserName" value="cap($Text)" scope="user"/>
-                <output value="Приятно познакомиться, $UserName! Напиши мне что-нибудь."/>
+                <var name="UserLog" value="cap($Text)" scope="log"/>
+                <output value="Отлично, Логин - $UserLog! Теперь пароль."/>
                 <context/>
             </input>
         </context>
     </input>
 
-    <input pattern="* пока *">
-        <var name="end_session" value="javascript: true"/>
-        <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
-        <output value="Пока-пока, $UserName!"/>
+    <input pattern="$Text">
+        <var name="UserPass" value="cap($Text)" scope="pass"/>
+                <output value="Отлично, Паротль - $UserPass! Соединяюсь."/>
     </input>
 
     <input pattern="[* (кто|что) так*] $Text">
