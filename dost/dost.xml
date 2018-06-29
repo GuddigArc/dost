@@ -1,14 +1,11 @@
 <context>
 
-    <sample>
-        <item value="Кто такая Алиса"/>
-        <item value="Что такое бот"/>
-    </sample>
+    
 
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserLog)">
-            <item value="Привет, $UserLog! Рада снова видеть тебя!"/>
-       
+            <item value="Привет, $UserLog! Рада снова видеть тебя! Напомни пароль?"/>
+        
         </output>
 
         <context if="empty($UserLog)" id="log">
