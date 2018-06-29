@@ -1,8 +1,7 @@
 <context>
 
   <input pattern="* (привет*|здравствуй*) *">
-        <output>
-           
+      
             <context if="empty($UserLog)" id="log">
             <output value="Привет! Меня зовут Алиса! Сообщи свой логин от мессенджера"/>
 
@@ -17,9 +16,7 @@
                 <context/>
             </input>
         </context>
-        </output>
-
-        
+      
           
     </input>
 
