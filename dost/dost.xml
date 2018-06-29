@@ -21,7 +21,7 @@
 
     <input pattern="$Text">
         <var name="UserPass" value="cap($Text)" scope="pass"/>
-                <output value="Отлично, Паротль - $UserPass! Соединяюсь."/>
+                <output value="Отлично, Пароль - $UserPass! Соединяюсь."/>
     </input>
 
     <input pattern="[* (кто|что) так*] $Text">
