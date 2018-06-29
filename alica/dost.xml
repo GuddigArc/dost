@@ -42,40 +42,15 @@
     </input>
 
 	<input pattern="Пицца">
-  <context>             	
-                <output value="Отлично, в Новокунецке есть несколько отличных пиццерий. Но давайте узнаем ваш район?"/>
-     <sample>
-	<item value="Центральный"/>
-  <item value="Заводской"/>
-<item value="Новоильинский"/>
-<item value="Куйбышевский"/>
-<item value="Орджоникидзевский"/> 
-</sample>
-            </input>
-	<input pattern="Центральный">
-               	
-                <output value="Тут список"/>
-     <sample>
-	<item value="1"/>
-  <item value="2"/>
-<item value="3"/>
-<item value="4"/>
-<item value="5"/> 
-</sample>
-</context>
-            </input>		
-
+    <context id="pizza"/>           	
+    </input>
 	<input pattern="Суши">
-               	
-                <output value="Отлично, в Новокунецке есть несколько отличных японских ресторанов и суши баров. Но давайте узнаем ваш район?"/>
-     <sample>
-	<item value="Центральный"/>
-  <item value="Заводской"/>
-<item value="Новоильинский"/>
-<item value="Куйбышевский"/>
-<item value="Орджоникидзевский"/> 
-</sample>
-            </input>
+    <context id="sushi"/>           	
+    </input>	
+	<input pattern="Бургер">
+    <context id="burger"/>           	
+    </input>
+	
 			
 
 
