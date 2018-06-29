@@ -4,20 +4,20 @@
 
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
-            <item value="Привет, $UserName! Рада снова видеть тебя! Хочешь кушать?"/>
+            <item value="Привет, $UserName! Рада снова видеть тебя! Поищем, что бы поесть?"/>
 			
 			
         </output>
 <sample>
         <item value="Да"/>
-        <item value="Очень голоден"/>
+         <item value="Давай поищем"/>
     </sample>
         <context if="empty($UserName)" id="user">
             <output value="Привет! Меня зовут Эльза из Эль Патио! Как зовут тебя?"/>
 
             <input pattern="$Text">
                 <var name="UserName" value="cap($Text)" scope="user"/>
-                <output value="Отлично, $UserName! Теперь поищем, что бы поесть?."/>
+                <output value="Отлично, $UserName! Теперь поищем, что бы поесть?"/>
 				<sample>
         <item value="Да"/>
         <item value="Давай поищем"/>
