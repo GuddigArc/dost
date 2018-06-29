@@ -10,7 +10,7 @@
         </output>
 <sample>
         <item value="Да"/>
-        <item value="Давай поищем"/>
+        <item value="Очень голоден"/>
     </sample>
         <context if="empty($UserName)" id="user">
             <output value="Привет! Меня зовут Эльза из Эль Патио! Как зовут тебя?"/>
@@ -27,7 +27,7 @@
         </context>
     </input>
 
-    <input pattern="* (Да*|Давай*|Конечно*) *">
+    <input pattern="* (Да*|Давай*|Конечно*|Очень голоден*) *">
 		<output value="Отлично, Пицца, суши или Бургеры?."/>
 		<sample>
 	<item value="Пицца"/>
@@ -35,13 +35,32 @@
 <item value="Бургеры"/> 
 </sample>
     </input>
-
+<context>
 	<input pattern="Пицца">
                	
-                <output value="Отлично, в Новокунецке есть несколько отличных пицерий"/>
-     
+                <output value="Отлично, в Новокунецке есть несколько отличных пиццерий. Но давайте узнаем ваш район?"/>
+     <sample>
+	<item value="Центральный"/>
+  <item value="Заводской"/>
+<item value="Новоильинский"/>
+<item value="Куйбышевский"/>
+<item value="Орджоникидзевский"/> 
+</sample>
             </input>
-			
+</context>
+<context>
+	<input pattern="Суши">
+               	
+                <output value="Отлично, в Новокунецке есть несколько отличных японских ресторанов и суши баров. Но давайте узнаем ваш район?"/>
+     <sample>
+	<item value="Центральный"/>
+  <item value="Заводской"/>
+<item value="Новоильинский"/>
+<item value="Куйбышевский"/>
+<item value="Орджоникидзевский"/> 
+</sample>
+            </input>
+</context>				
 
 
 
