@@ -1,24 +1,26 @@
 <context>
 
   <input pattern="* (привет*|здравствуй*) *">
-      
+      <output value="Привет. Я готова к соединению с менеджером. приступим?"/>
+    
+    </input>
+  <input pattern="* Да *">  
             <context if="empty($UserLog)" id="log">
-            <output value="Привет! Меня зовут Алиса! Сообщи свой логин от мессенджера"/>
+            <output value="Ок. Сообщи свой логин от мессенджера"/>
 
-            <input pattern="$Text">
-                <var name="UserLog" value="cap($Text)" scope="log"/>
+            <input pattern="$log">
+                <var name="UserLog" value="cap($log)" scope="log"/>
                 <output value="Отлично, Логин - $UserLog! А теперь пароль."/>
                 <context/>
             </input>
-            <input pattern="$Text">
-                <var name="UserPass" value="cap($Text)" scope="userpass"/>
+            <input pattern="$Pass">
+                <var name="UserPass" value="cap($Pass)" scope="userpass"/>
                 <output value="Отлично, пароль - $UserPass! соединяюсь."/>
                 <context/>
             </input>
         </context>
-      
+     </input>  
           
-    </input>
 
     <input pattern="* пока *">
         <var name="end_session" value="javascript: true"/>
