@@ -14,13 +14,13 @@
        <context if="empty($UserLog)" id="log">
             <output value="Ок. Сообщи свой логин от мессенджера"/>
 
-            <input pattern="$log">
-                <var name="UserLog" value="cap($log)" scope="log"/>
+            <input pattern="$Text">
+                <var name="UserLog" value="cap($Text)" scope="log"/>
                 <output value="Отлично, Логин - $UserLog! А теперь пароль."/>
                 <context/>
             </input>
-            <input pattern="$Pass">
-                <var name="UserPass" value="cap($Pass)" scope="userpass"/>
+            <input pattern="$Text">
+                <var name="UserPass" value="cap($Text)" scope="userpass"/>
                 <output value="Отлично, пароль - $UserPass! соединяюсь."/>
                 <context/>
     </input>
