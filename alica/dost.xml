@@ -52,7 +52,6 @@
 <item value="Орджоникидзевский"/> 
 </sample>
             </input>
-<context>
 	<input pattern="Центральный">
                	
                 <output value="Тут список"/>
@@ -63,8 +62,7 @@
 <item value="4"/>
 <item value="5"/> 
 </sample>
-            </input>
-</context>			
+            </input>		
 </context>
 	<input pattern="Суши">
                	
