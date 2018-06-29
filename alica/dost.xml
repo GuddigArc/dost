@@ -19,10 +19,10 @@
                 <var name="UserName" value="cap($Text)" scope="user"/>
                 <output value="Отлично, $UserName! Теперь поищем, что бы поесть?"/>
 				<sample>
-        <item value="$link"/>
+        <item value="Да"/>
         <item value="Давай поищем"/>
     </sample>
-             
+               
             </input>
         </context>
     </input>
