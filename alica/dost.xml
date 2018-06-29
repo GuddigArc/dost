@@ -19,7 +19,7 @@
                 <var name="UserName" value="cap($Text)" scope="user"/>
                 <output value="Отлично, $UserName! Теперь поищем, что бы поесть?"/>
 				<sample>
-        <item value="Да"/>
+		<item url="http://svadba-plus.ru/" value="Да"/>
         <item value="Давай поищем"/>
     </sample>
                
@@ -48,11 +48,17 @@
     <context id="sushi"/>           	
     </input>	
 	<input pattern="Бургер">
-    <context id="burger"/>           	
+	<context id="burger"/>           	
     </input>
 	
-			
-
+	<!-- Содержание по еде -->
+	<context id="pizza">
+	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
+	</context>
+	<context id="sushi"/>
+	</context>	
+	<context id="burger"/>  
+	</context>
 
 
 	<!--<input pattern="[* (кто|что) так*] $Text">
