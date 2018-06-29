@@ -6,12 +6,12 @@
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя! Хочешь кушать?"/>
 			
-			<sample>
+			
+        </output>
+<sample>
         <item value="Да"/>
         <item value="Давай поищем"/>
     </sample>
-        </output>
-
         <context if="empty($UserName)" id="user">
             <output value="Привет! Меня зовут Эльза из Эль Патио! Как зовут тебя?"/>
 
