@@ -3,27 +3,34 @@
     
 
     <input pattern="* (привет*|здравствуй*) *">
-        <output if="full($UserLog)">
-            <item value="Привет, $UserLog! Рада снова видеть тебя! Напомни пароль?"/>
-        
+        <output if="full($UserName)">
+            <item value="Привет, $UserName! Рада снова видеть тебя! Хочешь кушать?"/>
+			<item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
         </output>
 
-        <context if="empty($UserLog)" id="log">
-            <output value="Привет! Меня зовут Алиса! И мы будем соединятся с мессенджером. Сообщи свой логин"/>
+        <context if="empty($UserName)" id="user">
+            <output value="Привет! Меня зовут Эльза из Эль Патио! Как зовут тебя?"/>
 
             <input pattern="$Text">
-                <var name="UserLog" value="cap($Text)" scope="log"/>
-                <output value="Отлично, Логин - $UserLog! Теперь пароль."/>
+                <var name="UserName" value="cap($Text)" scope="user"/>
+                <output value="Отлично, $UserName! Теперь поищем, что бы поесть?."/>
                 <context/>
             </input>
         </context>
     </input>
 
-    <input pattern="$Text">
-        <var name="UserPass" value="cap($Text)" scope="pass"/>
-                <output value="Отлично, Пароль - $UserPass! Соединяюсь."/>
+    <input pattern="* (Да*|Давай*|Конечно*) *">
+		<output value="Отлично, в каком ты городе?."/>
+	<sample>
+        <item value="Да"/>
+        <item value="Давай поищем"/>
+    </sample>
     </input>
-
+<input pattern="$Text">
+                <var name="Gorod" value="cap($Text)" scope="gorod"/>
+                <output value="Отлично, город - $Gorod! Пицца, суши или Бургеры?."/>
+                
+            </input>
     <input pattern="[* (кто|что) так*] $Text">
         <context id="name" if="empty($UserName)"/>
 
