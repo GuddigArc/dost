@@ -6,12 +6,12 @@
             
         </output>
 
-        <context if="empty($UserName)" id="name">
+        <context if="empty($UserLog)" id="log">
             <output value="Привет! Меня зовут Алиса! Сообщи свой логин от мессенджера"/>
 
             <input pattern="$Text">
-                <var name="UserName" value="cap($Text)" scope="user"/>
-                <output value="Отлично, Логин - $UserName! А теперь пароль."/>
+                <var name="UserLog" value="cap($Text)" scope="log"/>
+                <output value="Отлично, Логин - $UserLog! А теперь пароль."/>
                 <context/>
             </input>
             <input pattern="$Text">
