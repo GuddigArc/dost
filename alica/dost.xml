@@ -1,7 +1,7 @@
 <context>
 
     
-
+<!-- Знакомство -->
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя! Поищем, что бы поесть?"/>
@@ -26,6 +26,8 @@
             </input>
         </context>
     </input>
+	
+<!-- Выбор еды -->
 
     <input pattern="* (Да*|Давай*|Конечно*|Очень голоден*) *">
 	 <var name="Pizza" value="Пицца" scope="pizza"/>
@@ -38,7 +40,7 @@
 <item value="Бургеры"/> 
 </sample>
     </input>
-
+<context>
 	<input pattern="Пицца">
                	
                 <output value="Отлично, в Новокунецке есть несколько отличных пиццерий. Но давайте узнаем ваш район?"/>
@@ -50,6 +52,7 @@
 <item value="Орджоникидзевский"/> 
 </sample>
             </input>
+<context>
 	<input pattern="Центральный">
                	
                 <output value="Тут список"/>
@@ -60,8 +63,9 @@
 <item value="4"/>
 <item value="5"/> 
 </sample>
-            </input>		
-
+            </input>
+</context>			
+</context>
 	<input pattern="Суши">
                	
                 <output value="Отлично, в Новокунецке есть несколько отличных японских ресторанов и суши баров. Но давайте узнаем ваш район?"/>
