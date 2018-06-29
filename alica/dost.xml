@@ -22,11 +22,7 @@
         <item value="$link"/>
         <item value="Давай поищем"/>
     </sample>
-               <sample>
-      <url>https://elpatio.pro/pizza</url>
-      <hide>true</hide>
-      <title>Пицца в Новокузнецке</title>
-    </sample>
+             
             </input>
         </context>
     </input>
