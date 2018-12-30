@@ -1,71 +1,34 @@
 <context>
 
-    
-<!-- Знакомство -->
+    <sample>
+        <item value="Кто такая Алиса"/>
+        <item value="Что такое бот"/>
+    </sample>
+
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
-            <item value="Привет, $UserName! Рада снова видеть тебя! Поищем, что бы поесть?"/>
-			
-			
+            <item value="Привет, $UserName! Рада снова видеть тебя!"/>
+            <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
         </output>
-<sample>
-        <item value="Да"/>
-         <item value="Давай поищем"/>
-    </sample>
-        <context if="empty($UserName)" id="user">
-            <output value="Привет! Меня зовут Эльза из Эль Патио! Как зовут тебя?"/>
+
+        <context if="empty($UserName)" id="name">
+            <output value="Привет! Меня зовут Алиса! А это - демонстрация моего навыка, созданного с помощью платформы zenbot. Как тебя зовут?"/>
 
             <input pattern="$Text">
                 <var name="UserName" value="cap($Text)" scope="user"/>
-                <output value="Отлично, $UserName! Теперь поищем, что бы поесть?"/>
-				<sample>
-        <item value="Да"/>
-        <item value="Давай поищем"/>
-    </sample>
-               
+                <output value="Приятно познакомиться, $UserName! Напиши мне что-нибудь."/>
+                <context/>
             </input>
         </context>
     </input>
-	
-<!-- Выбор еды -->
 
-    <input pattern="* (Да*|Давай*|Конечно*|Очень голоден*) *">
-	 <var name="Pizza" value="Пицца" scope="pizza"/>
-	  <var name="Sushi" value="Суши" scope="sushi"/>
-	   <var name="Burger" value="Бургер" scope="burger"/>
-		<output value="Отлично, Пицца, суши или Бургеры?."/>
-		<sample>
-	<item value="Пицца"/>
-  <item value="Суши"/>
-<item value="Бургеры"/> 
-</sample>
+    <input pattern="* пока *">
+        <var name="end_session" value="javascript: true"/>
+        <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
+        <output value="Пока-пока, $UserName!"/>
     </input>
 
-	<input pattern="Пицца">
-   
-	 <output value="Ага, значит пицца? Ок. Вот что мы рекомендуем:"/>
-	      	
-    </input>
-	<input pattern="Суши">
-   
-	 <output value="Ага, значит Суши? Ок. Вот что мы рекомендуем:"/>
-	      	
-    </input>
-	<input pattern="Бургер">
-   
-	 <output value="Ага, значит Бургер? Ок. Вот что мы рекомендуем:"/>
-	      	
-    </input>
-  
-
-	
-	<!-- Содержание по еде -->
-	
-	
-	
-
-
-	<!--<input pattern="[* (кто|что) так*] $Text">
+    <input pattern="[* (кто|что) так*] $Text">
         <context id="name" if="empty($UserName)"/>
 
         <context id="wiki" if="full($UserName)">
@@ -91,6 +54,6 @@
         </context>
 
 
-    </input>-->
+    </input>
 
 </context>
