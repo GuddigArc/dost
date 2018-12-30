@@ -1,26 +1,25 @@
 <context>
 
-     <input pattern="* (привет*|здравствуй*) *">
+    <sample>
+        <item value="Кто такая Алиса"/>
+        <item value="Что такое бот"/>
+    </sample>
+
+    <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя!"/>
-            <context if="empty($UserLog)" id="log">
-            <output value="Привет! Меня зовут Алиса! Сообщи свой логин от мессенджера"/>
+            <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
+        </output>
+
+        <context if="empty($UserName)" id="name">
+            <output value="Привет! Меня зовут Алиса! А это - демонстрация моего навыка, созданного с помощью платформы zenbot. Как тебя зовут?"/>
 
             <input pattern="$Text">
-                <var name="UserLog" value="cap($Text)" scope="log"/>
-                <output value="Отлично, Логин - $UserLog! А теперь пароль."/>
-                <context/>
-            </input>
-            <input pattern="$Text">
-                <var name="UserPass" value="cap($Text)" scope="userpass"/>
-                <output value="Отлично, пароль - $UserPass! соединяюсь."/>
+                <var name="UserName" value="cap($Text)" scope="user"/>
+                <output value="Приятно познакомиться, $UserName! Напиши мне что-нибудь."/>
                 <context/>
             </input>
         </context>
-        </output>
-
-        
-          
     </input>
 
     <input pattern="* пока *">
